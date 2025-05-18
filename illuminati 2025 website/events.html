@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - ILLUMINATI</title>
+  <link rel="stylesheet" href="event.css"> <!-- Link to styles.css -->
+  
+  <link rel="icon" type="image/x-icon" href="assets\x (4).png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+   
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <audio id="backgroundMusic" loop>
+    <source src="assets/music/thirumali.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <!-- Music Controls -->
+  <div class="music-controls">
+    <button id="decreaseVolume">🔉</button>
+    <button id="togglePlayPause">⏸</button>
+    <button id="increaseVolume">🔊</button>
+  </div>
+
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">ILLUMINATI ' 25</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="events" class="events-section">
+    <div class="container">
+      <h2 class="section-title animate-text">Events</h2>
+      <div class="event-tabs">
+        <button class="tab-button active" data-category="all">All</button>
+        <button class="tab-button" data-category="technical">Technical</button>
+        <button class="tab-button" data-category="cultural">Cultural</button>
+      </div>
+      
+      <div class="events-grid">
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\persona.png" alt="Event 1">
+          <div class="event-info">
+            <h3>MR.& MRS.ILLUMINATI-Persona</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/Eca61yikJonCgar1A" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="MR.& MRS.ILLUMINATI-Persona"
+                data-description="Imperfection is beauty. Madness is genius and it is better to be absolutely ridiculous than absolutely boring. So step out. Ridicule. It’s personality time!"
+                data-rules="1.	Individual event
+                2.	No limit in the number of participants per college.
+                3.	Prelims will be there including a written test and a personal interview.
+                4.	3 boys & 3 girls get on stage for the final showdown.
+                5.	The decision of the judges shall be treated as final and binding on all.
+                6.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                7.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                8.	Refer general rules and regulations.
+                
+                "
+                data-rules-image="assets\Events\RUles\persona rules.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\voice of illuminati.png" alt="Event 2">
+          <div class="event-info">
+            <h3>VOICE OF ILLUMINATI</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/t9eUqLaZ4SjgEMyd6" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="VOICE OF ILLUMINATI"
+                data-description="Where words fail, music speaks.”  Woo the crowd by the magic of your voice. With hundreds of contestants every year to showcase their versatility and passion for music, here’s an event even bathroom singers wouldn’t dare to miss."
+                data-rules="1.	Individual event.
+                2.	The contestants will have to perform a melody, fast number and judges choice round (semi classical/thalam round).
+                3.	The karaoke tracks must be produced 30 minutes prior to the event.
+                4.	Participants should bring karaoke tracks themselves.
+                5.	The decision of the judges shall be treated as final and binding on all.
+                6.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                7.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                8.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\vc RULES.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\groupdance.png" alt="Event 2">
+          <div class="event-info">
+            <h3>Choreo Night- Group Dance</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/voVhDRZXTyPHxiRw6" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Choreo Night- Group Dance"
+                data-description="Choreo Night is not just breath taking stunts or vigour, it's also the rapport in your team. Mesmerize the audience with your awesome moves and show the power of your team."
+                data-rules="1.	Group event, subject to a minimum of 6 participants per team and maximum of 25 participants per team
+                2.	One person can participate only in one team.
+                3.	Vulgarities of any kind will not be tolerated and can cause immediate elimination of team
+                4.	Dangerous props (Sharp weapons, fire etc…) which may cause human or other mishap is strictly prohibited
+                5.	Theme and non-theme performances will not be judged separately.
+                6.	Theme should not hurt personal, communal or religious and political sentiments.
+                7.	Time slot of 10 min is allotted per team, including setting up time. Teams need to adhere to the time slots or could face elimination
+                8.	The decision of the judges shall be treated as final and binding on all.
+                9.	Event coordinator has the right to cancel the event if a minimum of 3 registration are not made.
+                10.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                11.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\dance RULES.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\STEPINSYNCHRO.png" alt="Event 2">
+          <div class="event-info">
+            <h3>De Ja Vu -Step in synchro</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/QanX83bVkH7GSsZ38" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="De Ja Vu -Step in synchro"
+                data-description="The art of dance becomes all the more mesmerizing when partners move like mirror reflections. Set the stage ablaze with your scintillating moves and take home the coveted prize!”"
+                data-rules="1.	Two members per team.
+                2.	Time permitted is minimum 4 minutes and maximum 10 min per team.
+                3.	Curtain board will be placed between the participants.
+                4.	Participants should dance in synchronization with each other.
+                5.	All language songs are allowed.
+                6.	Dance steps must be decent.
+                7.	The decision of the judges shall be treated as final and binding on all.
+                8.	Event coordinator has the right to cancel the event if a minimum of 3 registration are not made.
+                9.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                10.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\STEPINSYNCHRO RULES.png">
+                Info
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\SPOTDANCE.png" alt="Event 3">
+          <div class="event-info">
+            <h3>Feet on Fire -Spot Dance</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/SA167aXc7tE6Csuw7" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Feet on Fire -Spot Dance"
+                data-description="Explore your spontaneity and impulsiveness amidst the most dynamic crowd. It’s all about grabbing the moment. Put your dance skills to test and slay anything that’s thrown at you to snatch the title of the most spontaneous dancer!"
+                data-rules="1.	Individual event.
+                2.	Songs for the dance will be provided.
+                3.	Three minutes for each candidates.
+                4.	Only one round.
+                5.	No properties should be used.
+                6.	Vulgarities of any kind will not be tolerated and can cause immediate elimination of team.
+                7.	The decision of the judges shall be treated as final and binding on all.
+                8.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                9.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                10.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\SPOTDANCE rules.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\MEHANDI.png" alt="Event 3">
+          <div class="event-info">
+            <h3>Golden Palms- Mehendi Design</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/gErQYJ8rec9W4MCw8" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Golden Palms- Mehendi Design"
+                data-description="The hand is the canvas. The colours are the tools. Bridge the gap between fine art and FUN art!"
+                data-rules="
+                1.	Two participants per team (a designer and a model).
+                2.	Time limit is 1 hour.
+                3.	Participants should bring mehendi themselves.
+                4.	The decision of the judges shall be treated as final and binding on all.
+                5.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                6.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                7.	Refer general rules and regulations.                
+                "
+                data-rules-image="assets\Events\RUles\MEHANDI RULES.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\music band.png" alt="Event 3">
+          <div class="event-info">
+            <h3>Amplified -Music band</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/fJHnqQyk8zBcCaEw5" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Amplified -Music band"
+                data-description="Be it eastern or western, classical or rock, classics or pop, all we care about is the music. So pull out all your stops, vibe with the excitement and brace yourselves for this ultimate face-off."
+                data-rules="1.	Each team will be having 10 min setting time and 10 min for performance. 20 min in total. 
+                2.	All the members/ participants must be currently students of college.
+                3.	Participants bring their own instruments, Drums will be provided.
+                4.	Extra cymbals can be used.
+                5.	Team consist of maximum of 10 members.
+                6.	No minus tracks are allowed.
+                7.	The decision of the judges shall be treated as final and binding on all.
+                8.	Event coordinator has the right to cancel the event if a minimum of 3 registration are not made.
+                9.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                10.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\music band rules.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\TREASURE HUNT.png" alt="Event 3">
+          <div class="event-info">
+            <h3>GEM CRUSADE -Treasure Hunt</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/aA5J9MaqH2zin9cv5" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Amplified -Music band"
+                data-description="Be it eastern or western, classical or rock, classics or pop, all we care about is the music. So pull out all your stops, vibe with the excitement and brace yourselves for this ultimate face-off."
+                data-rules="1.	This is a team event.
+                2.	Maximum of 5 members per team
+                3.	There will be only 1 round that decides the winner team.
+                4.	First clue will be disclosed at the starting point.
+                5.	The team which finds the treasure first, will be announced as the winner.
+                6.	Students who are in charge of Illuminati and Colloquium events are not allowed to participate in this event.
+                7.	Rules for the finals will be revealed on the spot.
+                8.	The decision of the judges shall be treated as final and binding on all.
+                9.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                10.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                11.	Refer general rules and regulations
+                "
+                data-rules-image="assets\Events\RUles\TREASURE HUNT rules.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\spot photography.png" alt="Event 3">
+          <div class="event-info">
+            <h3>Cam- Boom -SPOT PHOTOGRAPHY</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/SiSLLSLyDY3r78Ru5" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Cam- Boom -SPOT PHOTOGRAPHY"
+                data-description="Be it eastern or western, classical or rock, classics or pop, all we care about is the music. So pull out all your stops, vibe with the excitement and brace yourselves for this ultimate face-off."
+                data-rules="1.	This is an individual event.
+                2.	Participants should bring their own camera for the event.
+                3.	Rules for the event will be announced before the commencement of event.
+                4.	The decision of the judges shall be treated as final and binding on all.
+                5.	Event coordinator has the right to cancel the event if a minimum of 3 registration are not made.
+                6.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                7.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\spot photography rules.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="technical">
+          <img src="assets\Events\Cultural\QUIZ.png" alt="Event 3">
+          <div class="event-info">
+            <h3>QUIZZARDS OF OZ-QUIZ</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/2s6yhdyq6NNCwWoKA" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="QUIZZARDS OF OZ-QUIZ"
+                data-description="Be it eastern or western, classical or rock, classics or pop, all we care about is the music. So pull out all your stops, vibe with the excitement and brace yourselves for this ultimate face-off."
+                data-rules="1.	This is a team event.
+                2.	A maximum of two participants are allowed per team.
+                3.	It comprises of two rounds (Prelims and finals)
+                4.	Four teams will be selected from the prelims to the final
+                5.	The decision of the judges shall be treated as final and binding on all.
+                6.	Event coordinator has the right to cancel the event if a minimum of 3 registration are not made.
+                7.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                8.	Refer general rules and regulations
+                "
+                data-rules-image="assets\Events\RUles\QUIZ RULES.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\standup.png" alt="Event 3">
+          <div class="event-info">
+            <h3>MIC DROP - Stand Up Comedy</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/p1EWWypLfFFSnBJU8" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="MIC DROP - Stand Up Comedy"
+                data-description="Get ready for a night of non-stop laughter! MIC DROP Stand-Up Comedy brings you the funniest comedians, the wittiest punchlines, and an unforgettable comedy experience. Don't miss out on the laughs!"
+                data-rules="1. Participants should bring their ID cards for the event.
+                2. Each participant can perform as a solo artist.
+                3. Time allotted for each participant will be 4 minutes.
+                4. Multiple entries are allowed from the same institution.
+                5. Use of abusive language or dark humor is not permitted.
+                6. Highest weightage would be placed on the originality and delivery of the content.
+                7. Plagiarism of content or use of inappropriate language will lead to negative marking or disqualification.
+                8. The performer should not hurt the sentiments of any religion or caste.
+                9. The decision made by the judges will be considered as final.
+                10. All participants should be college or school students
+                "
+                data-rules-image="assets\Events\RUles\standup rules.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="cultural">
+          <img src="assets\Events\Cultural\fashion show.png" alt="Event 3">
+          <div class="event-info">
+            <h3>FASHION FIESTA-Fashion Show</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/7Y5GmV1jDWBAsPmK7" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="FASHION FIESTA-Fashion Show"
+                data-description="Step into the spotlight! Join us for an electrifying night of style, glamour, and cutting-edge fashion at FASHION FIESTA. Witness stunning designs, bold trends, and an unforgettable runway experience"
+                data-rules="1.	A team can have 8-20 participants.
+                2.	A team will be given a time duration of 20 minutes.
+                3.	 Only a single team can participate for the competition from a college.
+                4.	 The team will be disqualified if participants exceed time limit.
+                5.	The team should carry their tracks in pen-drive or aux.
+                6.	Vulgarity is strictly prohibited.
+                7.	Teams will be judged based on costumes, theme, walking stance and attitude.
+                8.	Green room will be provided.
+                9.	The decision of the judges shall be treated as final and binding on all.
+                10.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                11.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                12.	Refer general rules and regulations.
+                
+                "
+                data-rules-image="assets\Events\RUles\FASHION SHOW RULES.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="technical">
+          <img src="assets\Events\Technical\ACME.png" alt="Event 3">
+          <div class="event-info">
+            <h3>ACME- Paper Presentation</h3>
+            <div class="event-buttons">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfEouzD2_sw5ipLnHYxHt4yD8nBF3Nw_ZUNOgbh9z5uGPLH_Q/viewform" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="ACME- Paper Presentation"
+                data-description="Join us for ACME Presentation, where innovation meets excellence! Discover groundbreaking ideas, key insights. Don't miss this opportunity to connect and be inspired!"
+                data-rules="1.	A maximum of 5 authors are allowed per paper.
+                2.	Participants must submit soft copy of the full paper in IEEE format to mcet.colloiquium24@gmail.com before the event.
+                3.	 Participants should report at the venue at least 30 minutes before the commencement of the event.
+                4.	Participants should bring two hard copies of the paper along with their presentation done in Microsoft Power Point in a CD/USB.
+                5.	Participants will be provided a maximum presentation time of 10 minutes followed by a 3 minutes questionnaire section.
+                6.	LCD projector will be provided.
+                7.	The decision of the judges shall be treated as final and binding on all.
+                8.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant.
+                9.	Refer general rules and regulations.
+                
+                
+                "
+                data-rules-image="assets\Events\RUles\ACME RULES.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="technical">
+          <img src="assets\Events\Technical\WRITING(MAL).png" alt="Event 3">
+          <div class="event-info">
+            <h3>Literaryz(Mal)-Writing Malayalam</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/naYq4dFBDZMESa8T8" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Literaryz(Mal)-Writing Malayalam"
+                data-description="Weave a story. Question your creativity. Your language is your power."
+                data-rules="1.	Individual registration.
+                2.	One hour event.
+                3.	Topic will be announced at the start of the event.
+                4.	Paper will be provided.
+                5.	The decision of the judges shall be treated as final and binding on all.
+                6.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                7.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                8.	Refer general rules and regulations.
+                "
+                data-rules-image="assets\Events\RUles\WRITING(MAL) RULE.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card" data-category="technical">
+          <img src="assets\Events\Technical\WRITING(ENG).png" alt="Event 4">
+          <div class="event-info">
+            <h3>Literaryz(Eng)-Writing English</h3>
+            <div class="event-buttons">
+              <a href="https://forms.gle/JichHCUD2wfvqiH56" class="btn-primary">Register</a>
+              <a href="#" class="btn-secondary"
+                data-title="Literaryz(Eng)-Writing English"
+                data-description="Weave a story. Question your creativity. Your language is your power."
+                data-rules="1.	Individual registration.
+                2.	One hour event.
+                3.	Topic will be announced at the start of the event.
+                4.	Paper will be provided.
+                5.	The decision of the judges shall be treated as final and binding on all.
+                6.	Event coordinator has the right to cancel the event if a minimum of 3 registrations are not made.
+                7.	In case of discrepancies, the coordinator shall have the sole responsibility to disqualify the contestant or in extreme cases, cancel the event.
+                8.	Refer general rules and regulations. 
+                  "
+                data-rules-image="assets\Events\RUles\WRITING(ENG) RULE.png">
+                Info
+              </a>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Left Section: Logos, Event Description, and Credits -->
+      <div class="footer-left">
+        <!-- Logos -->
+        <div class="logos-container">
+          <div class="logo-item logo-1">
+            <img src="assets/Final Logo-02 white (2).png" alt="Logo 1">
+          </div>
+          <div class="logo-item logo-2">
+            <img src="assets/IlluminatiColloquium.png" alt="Logo 2">
+          </div>
+          <div class="logo-item logo-3">
+            <img src="assets/x (4).png" alt="Logo 3">
+          </div>
+        </div>
+
+        <!-- Event Description -->
+        <div class="event-description">
+          <p>ILLUMINATI & COLLOQUIUM 2K25 is MCET's annual techno-cultural fest, celebrating innovation, creativity, and talent. Join us for an unforgettable journey of discovery and excitement!</p>
+        </div>
+
+        <!-- Credits -->
+        <div class="credits">
+          <a style="text-decoration: none; color: #ffffff;" href="https://ieee-sbmcet.netlify.app/developers"><p>Created with ❤️ by Grafyo</p></a>
+        </div>
+      </div>
+
+      <!-- Vertical Separator Line -->
+      <div class="vertical-line"></div>
+
+      <!-- Right Section: Links -->
+      <div class="footer-right">
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="PrivayPolicy.html">Privacy Policy</a></li>
+            <li><a href="T&C.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="social-links">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/illuminati_2k25/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCoXkEbMjyDA7BiwMvc-qN6w" target="_blank">YouTube</a></li>
+            <li><a href="https://www.facebook.com/MohandasCollege" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div class="modal-image">
+        <img id="modalImg" src="" alt="Event Image">
+      </div>
+      <div class="modal-info">
+        <h3 id="modalTitle">Event Title</h3> <!-- Title moved here -->
+        <div class="modal-tabs">
+          <button class="tab-button active" data-tab="info">Info</button>
+          <button class="tab-button" data-tab="rules">Rules</button>
+        </div>
+        <div id="info" class="tab-content active">
+          <p id="modalDescription">Event description will appear here...</p>
+        </div>
+        <div id="rules" class="tab-content">
+          <p id="modalRules">Event rules will appear here...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="event.js"></script>
+</body>
+</html> 

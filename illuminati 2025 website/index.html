@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILLUMINATI - MCET</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets\x (4).png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+  <!-- GSAP Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> 
+  <!-- ScrollReveal Library -->
+</head>
+<body>
+
+  <!-- <div class="loading">
+    <div class="loading-text">
+      <span class="loading-text-words">L</span>
+      <span class="loading-text-words">O</span>
+      <span class="loading-text-words">A</span>
+      <span class="loading-text-words">D</span>
+      <span class="loading-text-words">I</span>
+      <span class="loading-text-words">N</span>
+      <span class="loading-text-words">G</span>
+    </div>
+  </div> -->
+  <!-- Background Music -->
+<audio id="backgroundMusic" loop>
+  <source src="assets/music/thirumali.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Music Controls -->
+<div class="music-controls">
+  <button id="decreaseVolume">🔉</button>
+  <button id="togglePlayPause">⏸</button>
+  <button id="increaseVolume">🔊</button>
+</div>
+
+
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#landing" class="logo">ILLUMINATI ' 25</a>
+      <div class="menu-toggle" id="menuToggle">☰</div> <!-- Hamburger Menu -->
+<ul class="nav-links" id="navLinks">
+  <li><a href="#about">About</a></li>
+  <li><a href="events.html">Events</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><span class="close-menu" id="closeMenu">✖</span></li> <!-- Close Button -->
+</ul>
+      <a href="events.html" class="register-btn-navbar btn-primary">Register</a>
+    </div>
+  </nav>
+  
+  
+  
+  <section class="hero spad set-bg">
+    <video autoplay muted loop class="background-video">
+      <source src="assets/background video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div> <!-- Add this line -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="hero__text">
+            <h1>ILLUMINATI & COLLOQUIUM 2K25</h1>
+            <p>Mohandas Group of Institutions - Trivandrum, Hosts Illuminati'25, The Techno-Cultural Fest on March 21st and 22nd <br />Participants from all colleges are welcome, ProShow is free for Participants</p>
+          </div>
+          <div class="countdown-timer">
+            <div class="timer-item">
+              <span id="days">00</span>
+              <span>Days</span>
+            </div>
+            <div class="timer-item">
+              <span id="hours">00</span>
+              <span>Hours</span>
+            </div>
+            <div class="timer-item">
+              <span id="minutes">00</span>
+              <span>Minutes</span>
+            </div>
+            <div class="timer-item">
+              <span id="seconds">00</span>
+              <span>Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="linear__icon">
+      <i class="fa fa-angle-double-down" style="color:#ffda62;"></i>
+    </div>
+  </section>  
+
+ 
+
+<!-- Hero Section End -->
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-image">
+        <img class="about-img active" src="assets\Events\BROCHURE with Proshow peoples.png" alt="Poster 1">
+        <img class="about-img" src="assets\Events\thirumali.jpg" alt="Poster 2">
+        <img class="about-img" src="assets\Events\matetoori.jpg" alt="Poster 3">
+      </div>
+      <div class="about-text">
+        <h2 class="section-title animate-text">About ILLUMINATI</h2>
+        <p class="animate-text">
+          ILLUMINATI is the annual tech and cultural fest of MCET, bringing together the brightest minds for a celebration of innovation, creativity, and talent. Join us for a journey of discovery and excitement!
+        </p>
+      </div>
+    </div>
+  </div> 
+</section>
+
+
+
+
+<section id="events" class="events-section">
+  <div class="container">
+    <h2 class="section-title animate-text">Events</h2>
+    <div class="events-grid">
+      <!-- First Card -->
+      <div class="event-card" data-category="technical">
+        <img src="assets/WDP.png" alt="Technical Event">
+        <div class="event-info">
+          <div class="event-buttons">
+            <a href="events.html?category=technical" class="btn-primary">View Events</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div class="event-card" data-category="cultural">
+        <img src="assets/WDP1.png" alt="Cultural Event">
+        <div class="event-info">
+          <div class="event-buttons">
+            <a href="events.html?category=cultural" class="btn-primary">View Events</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card payment-card" data-category="payment">
+        <img id="qrCodeImage" src="assets/QR.png" alt="Payment QR Code">
+        <div class="event-info">
+          <h3>How to Pay</h3>
+          <p>Scan the QR code to complete your payment. After payment, share the screenshot of the transaction to us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title animate-text">Contact Us</h2>
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <div class="contact-form animate-card">
+        <h3>Send Us a Message</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-info animate-card">
+        <h3>Get in Touch</h3>
+        <div class="info-item">
+          <i class="fa fa-envelope"></i>
+          <p><strong>Email:</strong> <a href="mailto:mcetilluminati25@gmail.com">mcetilluminati25@gmail.com</a></p>
+        </div>
+        <div class="info-item">
+          <i class="fa fa-map-marker"></i>
+          <p><strong>Address:</strong> Mohandas Engineering College Rd, Nedumangad, Anad, Kerala 695544</p>
+        </div> 
+        <div class="map-container animate-card">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.555670985769!2d77.00360837501431!3d8.638582491408004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05c7de92d58b5f%3A0xdbff8055a9f6d8d3!2sMohandas%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1741161882098!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div> 
+
+      
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal" data-netlify="true">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div class="modal-image">
+        <img id="modalImg" src="" alt="Event Image">
+      </div>
+      <div id="modal-info">
+        <h3 id="modalTitle">Event Title</h3>
+        <!-- Tab Navigation -->
+        <div class="modal-tabs">
+          <button class="tab-button active" data-tab="info">Info</button>
+          <button class="tab-button" data-tab="rules">Rules</button>
+        </div>
+        <!-- Info Section -->
+        <div id="info" class="tab-content active">
+          <p id="modalDescription">Event description will appear here...</p>
+        </div>
+        <!-- Rules Section -->
+        <div id="rules" class="tab-content">
+          <p id="modalRules">Event rules will appear here...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</section>
+
+ 
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Left Section: Logos, Event Description, and Credits -->
+      <div class="footer-left">
+        <!-- Logos -->
+        <div class="logos-container">
+          <div class="logo-item logo-1">
+            <img src="assets/Final Logo-02 white (2).png" alt="Logo 1">
+          </div>
+          <div class="logo-item logo-2">
+            <img src="assets/IlluminatiColloquium.png" alt="Logo 2">
+          </div>
+          <div class="logo-item logo-3">
+            <img src="assets/x (4).png" alt="Logo 3">
+          </div>
+        </div>
+
+        <!-- Event Description -->
+        <div class="event-description">
+          <p>ILLUMINATI & COLLOQUIUM 2K25 is MCET's annual techno-cultural fest, celebrating innovation, creativity, and talent. Join us for an unforgettable journey of discovery and excitement!</p>
+        </div>
+
+        <!-- Credits -->
+        <div class="credits">
+          <a style="text-decoration: none; color: #ffffff;" href="https://ieee-sbmcet.netlify.app/developers"><p>Created with ❤️ by Grafyo</p></a>
+        </div>
+      </div>
+
+      <!-- Vertical Separator Line -->
+      <div class="vertical-line"></div>
+
+      <!-- Right Section: Links -->
+      <div class="footer-right">
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="PrivayPolicy.html">Privacy Policy</a></li>
+            <li><a href="T&C.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="social-links">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/illuminati_2k25/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCoXkEbMjyDA7BiwMvc-qN6w" target="_blank">YouTube</a></li>
+            <li><a href="https://www.facebook.com/MohandasCollege" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <!-- Lightbox Container -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img class="lightbox-img" src="" alt="Lightbox Image">
+</div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
